@@ -31,10 +31,10 @@ global:
 
 ## @param nameOverride String to partially override external-dns.fullname template (will maintain the release name)
 ##
-nameOverride: external-dns
+nameOverride: ""
 ## @param fullnameOverride String to fully override external-dns.fullname template
 ##
-fullnameOverride: ""
+fullnameOverride: external-dns
 ## @param clusterDomain Kubernetes Cluster Domain
 ##
 clusterDomain: cluster.local
