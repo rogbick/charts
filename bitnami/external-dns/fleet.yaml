@@ -1,3 +1,5 @@
 namespace: external-dns
 
 nameOverride: external-dns
+
+provider: rfc2136
