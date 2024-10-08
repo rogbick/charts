@@ -31,7 +31,7 @@ global:
 
 ## @param nameOverride String to partially override external-dns.fullname template (will maintain the release name)
 ##
-nameOverride: ""
+nameOverride: external-dns
 ## @param fullnameOverride String to fully override external-dns.fullname template
 ##
 fullnameOverride: ""
