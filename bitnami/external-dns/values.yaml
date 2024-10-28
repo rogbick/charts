@@ -686,7 +686,7 @@ rfc2136:
   tsigSecret: 09uZFmt6ovtiKNN8pSV2gc8dADEGUKbFPfyX86x757o
   ## @param rfc2136.secretName When using the rfc2136 provider, specify the existing secret which contains your tsig secret in the key "rfc2136_tsig_secret". Disables the usage of `rfc2136.tsigSecret` (optional)
   ##
-  secretName: external-dns
+  secretName: ""
   ## @param rfc2136.tsigSecretAlg When using the rfc2136 provider, specify the tsig secret to enable security (optional)
   ##
   tsigSecretAlg: hmac-sha256
