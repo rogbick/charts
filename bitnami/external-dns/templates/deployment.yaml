@@ -14,7 +14,6 @@ metadata:
   {{- end }}
 spec:
   revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
-  replicas: 1
   {{- if .Values.updateStrategy }}
   strategy: {{- toYaml .Values.updateStrategy | nindent 4 }}
   {{- end }}
