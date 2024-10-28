@@ -115,7 +115,7 @@ sources:
 ## Available providers are:
 ## - akamai, alibabacloud, aws, azure, azure-private-dns, cloudflare, coredns, designate, digitalocean, google, hetzner, infoblox, linode, rfc2136, transip, oci
 ##
-provider: aws
+provider: rfc2136
 ## @param initContainers Attach additional init containers to the pod (evaluated as a template)
 ##
 initContainers: []
@@ -674,25 +674,25 @@ scaleway:
 rfc2136:
   ## @param rfc2136.host When using the rfc2136 provider, specify the RFC2136 host (required when provider=rfc2136)
   ##
-  host: ""
+  host: 10.55.12.174
   ## @param rfc2136.port When using the rfc2136 provider, specify the RFC2136 port (optional)
   ##
   port: 53
   ## @param rfc2136.zone When using the rfc2136 provider, specify the zone (required when provider=rfc2136)
   ##
-  zone: ""
+  zone: tridentcloud.dev
   ## @param rfc2136.tsigSecret When using the rfc2136 provider, specify the tsig secret to enable security. (do not specify if `rfc2136.secretName` is provided.) (optional)
   ##
-  tsigSecret: ""
+  tsigSecret: 09uZFmt6ovtiKNN8pSV2gc8dADEGUKbFPfyX86x757o
   ## @param rfc2136.secretName When using the rfc2136 provider, specify the existing secret which contains your tsig secret in the key "rfc2136_tsig_secret". Disables the usage of `rfc2136.tsigSecret` (optional)
   ##
-  secretName: ""
+  secretName: external-dns
   ## @param rfc2136.tsigSecretAlg When using the rfc2136 provider, specify the tsig secret to enable security (optional)
   ##
   tsigSecretAlg: hmac-sha256
   ## @param rfc2136.tsigKeyname When using the rfc2136 provider, specify the tsig keyname to enable security (optional)
   ##
-  tsigKeyname: rfc2136_tsig_secret
+  tsigKeyname: external-dns
   ## @param rfc2136.tsigAxfr When using the rfc2136 provider, enable AFXR to enable security (optional)
   ##
   tsigAxfr: true
